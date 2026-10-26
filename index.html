@@ -147,6 +147,8 @@ details.item p{font-size:14px;color:var(--ink-2);margin-top:10px}
 .cta-ways svg{opacity:.7;flex:none}
 .cta-ways a{border-bottom:1px solid rgba(255,255,255,.25);padding-bottom:1px}
 .cta-ways a:hover{border-color:#fff}
+.wxid{color:#fff;font-weight:700;letter-spacing:.04em;border-bottom:1px dashed rgba(255,255,255,.45);padding-bottom:1px;cursor:pointer}
+.wxid:hover{border-bottom-color:#fff}
 
 /* ---------- tbd ---------- */
 .tbd{color:var(--gold);background:var(--gold-soft);border-bottom:1px dashed var(--gold);padding:0 4px;border-radius:3px;font-size:13px}
@@ -366,7 +368,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
       <div class="cta-ways">
         <div>
           <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round"><path d="M21 11.5a8.4 8.4 0 0 1-9 8.4 9 9 0 0 1-3.9-.9L3 21l1.9-4.9A8.4 8.4 0 0 1 12 3a8.4 8.4 0 0 1 9 8.5Z"/></svg>
-          <span>微信：<span class="tbd">待补充</span></span>
+          <span>微信：<span class="wxid" id="wxId" title="点击复制微信号">j1309f</span></span>
         </div>
       </div>
     </div>
@@ -409,12 +411,11 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
     secs.forEach(function(s){ if(s) spy.observe(s); });
   }
 
-  function bindCopy(id){
+  function bindCopy(id,text,copiedLabel){
     var b=document.getElementById(id); if(!b) return;
     var label=b.textContent;
     b.addEventListener('click',function(){
-      var text='2762809302@qq.com';
-      var done=function(){ b.textContent='已复制，去粘贴吧'; setTimeout(function(){b.textContent=label;},1800); };
+      var done=function(){ b.textContent=copiedLabel||'已复制'; setTimeout(function(){b.textContent=label;},1800); };
       var fb=function(){
         var ta=document.createElement('textarea');
         ta.value=text; ta.style.position='fixed'; ta.style.opacity='0';
@@ -427,7 +428,8 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
       }else{ fb(); }
     });
   }
-  bindCopy('copyMail'); bindCopy('copyMail2');
+  bindCopy('copyMail','2762809302@qq.com','已复制邮箱');
+  bindCopy('wxId','j1309f','微信号已复制');
 })();
 </script>
 </body>
