@@ -3,12 +3,12 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>杨天赐 · 猎头顾问 | 算法 &amp; 具身智能方向</title>
-<meta name="description" content="杨天赐，猎头顾问，专注算法与具身智能（机器人）方向技术岗位招聘，年度个人业绩 80 万元。">
+<title>杨天赐 · 算法 &amp; 具身智能方向猎头顾问</title>
+<meta name="description" content="专注算法与具身智能（机器人）方向的猎头顾问，帮工程师找到值得去的团队：岗位匹配、简历梳理、面试陪跑、薪资谈判，对候选人全程免费。">
 <meta name="author" content="杨天赐">
-<meta property="og:title" content="杨天赐 · 猎头顾问 | 算法 & 具身智能方向">
-<meta property="og:description" content="专注算法与具身智能方向技术招聘，年度个人业绩 80 万元。">
-<meta property="og:type" content="profile">
+<meta property="og:title" content="杨天赐 · 算法 & 具身智能方向猎头顾问">
+<meta property="og:description" content="帮算法与具身智能方向的工程师，找到值得去的团队。岗位匹配 · 简历梳理 · 面试陪跑 · 薪资谈判。">
+<meta property="og:type" content="website">
 <style>
 :root{
   --ink:#0F172A;
@@ -21,6 +21,8 @@
   --brand-soft:#EEF3FF;
   --gold:#B4690E;
   --gold-soft:#FDF3E3;
+  --green:#0F6E56;
+  --green-soft:#E1F5EE;
   --radius:14px;
   --shadow:0 1px 2px rgba(15,23,42,.04),0 8px 24px rgba(15,23,42,.06);
   --maxw:1040px;
@@ -29,448 +31,415 @@
 html{scroll-behavior:smooth}
 body{
   font-family:"PingFang SC","Hiragino Sans GB","Microsoft YaHei","Source Han Sans SC",sans-serif;
-  color:var(--ink);
-  background:var(--bg);
-  line-height:1.75;
+  color:var(--ink);background:var(--bg);line-height:1.75;font-size:15px;
   -webkit-font-smoothing:antialiased;
-  font-size:15px;
 }
 a{color:inherit;text-decoration:none}
 .wrap{max-width:var(--maxw);margin:0 auto;padding:0 24px}
 
 /* ---------- hero ---------- */
-.hero{
-  background:var(--ink);
-  color:#F8FAFC;
-  padding:56px 0 44px;
-  position:relative;
-  overflow:hidden;
-}
+.hero{background:var(--ink);color:#F8FAFC;padding:60px 0 46px;position:relative;overflow:hidden}
 .hero::after{
-  content:"";
-  position:absolute;
-  right:-120px;top:-120px;
-  width:360px;height:360px;
-  border-radius:50%;
-  border:1px solid rgba(255,255,255,.08);
-  pointer-events:none;
+  content:"";position:absolute;right:-140px;top:-140px;width:400px;height:400px;
+  border-radius:50%;border:1px solid rgba(255,255,255,.08);pointer-events:none;
 }
-.hero-top{display:flex;align-items:flex-start;justify-content:space-between;gap:24px;flex-wrap:wrap}
-.name{
-  font-size:38px;
-  font-weight:700;
-  letter-spacing:.08em;
-  line-height:1.2;
+.hero::before{
+  content:"";position:absolute;right:60px;bottom:-190px;width:320px;height:320px;
+  border-radius:50%;border:1px solid rgba(255,255,255,.05);pointer-events:none;
 }
-.role{
-  margin-top:10px;
-  font-size:16px;
-  color:#C7D2FE;
-  letter-spacing:.04em;
+.hero-inner{position:relative;z-index:1}
+.who{display:inline-flex;align-items:center;gap:10px;font-size:13px;letter-spacing:.06em;color:#C7D2FE;margin-bottom:16px}
+.who::before{content:"";width:22px;height:1px;background:#C7D2FE;opacity:.6}
+h1.headline{font-size:34px;font-weight:700;line-height:1.42;letter-spacing:.01em;max-width:800px}
+h1.headline em{font-style:normal;color:#93B4FF}
+.hero p.sub{margin-top:16px;font-size:15.5px;color:#B6C2D6;max-width:700px;line-height:1.85}
+.hero-actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:26px}
+.btn{
+  font:inherit;font-size:13.5px;border:1px solid rgba(255,255,255,.22);
+  background:rgba(255,255,255,.06);color:#E7ECF5;padding:9px 18px;border-radius:9px;
+  cursor:pointer;transition:background .18s,border-color .18s,transform .12s;white-space:nowrap;
 }
-.chips{display:flex;gap:8px;flex-wrap:wrap;margin-top:18px}
-.chip{
-  font-size:12.5px;
-  padding:4px 11px;
-  border-radius:999px;
-  border:1px solid rgba(199,210,254,.32);
-  color:#DBE4FF;
-  background:rgba(255,255,255,.05);
-  letter-spacing:.02em;
+.btn:hover{background:rgba(255,255,255,.12);border-color:rgba(255,255,255,.34)}
+.btn:active{transform:translateY(1px)}
+.btn-solid{background:#fff;border-color:#fff;color:var(--ink);font-weight:600}
+.btn-solid:hover{background:#EEF2FF;border-color:#EEF2FF}
+.hero-facts{
+  display:flex;gap:30px;flex-wrap:wrap;margin-top:34px;padding-top:22px;
+  border-top:1px solid rgba(255,255,255,.12);font-size:13px;color:#94A3B8;letter-spacing:.02em;
 }
-.contact{
-  display:grid;
-  gap:9px;
-  font-size:13.5px;
-  color:#CBD5E1;
-  min-width:250px;
-}
-.contact-row{display:flex;align-items:center;gap:9px}
-.contact-row svg{flex:none;opacity:.75}
-.contact-row a:hover{color:#fff;text-decoration:underline;text-underline-offset:3px}
+.hero-facts b{color:#fff;font-size:19px;font-weight:700;margin-right:5px}
 
-/* ---------- quick nav ---------- */
-.quicknav{
-  position:sticky;top:0;z-index:20;
-  background:rgba(246,247,249,.92);
-  backdrop-filter:blur(8px);
-  border-bottom:1px solid var(--line);
-}
-.quicknav .wrap{display:flex;align-items:center;gap:6px;height:52px;overflow-x:auto}
-.quicknav a{
-  font-size:13.5px;color:var(--ink-3);
-  padding:6px 12px;border-radius:8px;white-space:nowrap;
-  transition:color .18s,background .18s;
-}
+/* ---------- nav ---------- */
+.quicknav{position:sticky;top:0;z-index:20;background:rgba(246,247,249,.94);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.quicknav .wrap{display:flex;align-items:center;gap:4px;height:52px;overflow-x:auto}
+.quicknav a{font-size:13.5px;color:var(--ink-3);padding:6px 12px;border-radius:8px;white-space:nowrap;transition:color .18s,background .18s}
 .quicknav a:hover{color:var(--ink);background:#EDEFF3}
 .quicknav a.active{color:var(--brand);background:var(--brand-soft);font-weight:600}
-.nav-actions{margin-left:auto;display:flex;gap:8px}
-.btn{
-  font:inherit;font-size:13px;
-  border:1px solid var(--line);
-  background:var(--card);
-  color:var(--ink-2);
-  padding:6px 13px;border-radius:8px;cursor:pointer;
-  transition:border-color .18s,color .18s,transform .12s;
-  white-space:nowrap;
-}
-.btn:hover{border-color:#C7CEDB;color:var(--ink)}
-.btn:active{transform:translateY(1px)}
-.btn-primary{background:var(--brand);border-color:var(--brand);color:#fff}
-.btn-primary:hover{background:#1A45C4;border-color:#1A45C4;color:#fff}
 
-/* ---------- layout ---------- */
-main{padding:36px 0 20px}
+/* ---------- sections ---------- */
+main{padding:38px 0 20px}
 section{scroll-margin-top:70px}
-.section{margin-bottom:40px}
-.section-head{display:flex;align-items:center;gap:10px;margin-bottom:16px}
-.section-head h2{
-  font-size:18px;font-weight:700;letter-spacing:.06em;
-}
-.section-head::before{
-  content:"";width:4px;height:18px;border-radius:2px;background:var(--brand);
-}
-.section-head .hint{font-size:12.5px;color:var(--ink-3);letter-spacing:.02em}
+.section{margin-bottom:44px}
+.section-head{display:flex;align-items:baseline;gap:10px;margin-bottom:8px}
+.section-head::before{content:"";width:4px;height:18px;border-radius:2px;background:var(--brand);position:relative;top:2px}
+.section-head h2{font-size:19px;font-weight:700;letter-spacing:.04em}
+.section-sub{font-size:14px;color:var(--ink-3);margin-bottom:18px;letter-spacing:.01em}
 
-/* ---------- kpi ---------- */
-.kpis{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
-.kpi{
-  background:var(--card);border:1px solid var(--line);border-radius:var(--radius);
-  padding:16px 16px 14px;
-  box-shadow:var(--shadow);
-}
-.kpi .num{font-size:26px;font-weight:700;color:var(--brand);line-height:1.2;letter-spacing:.01em}
-.kpi .num small{font-size:14px;font-weight:600;margin-left:2px}
-.kpi .lab{font-size:12.5px;color:var(--ink-3);margin-top:6px;letter-spacing:.02em}
-.kpi.is-tbd .num{color:var(--gold);font-size:18px}
+/* ---------- value cards ---------- */
+.values{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.value{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:20px;box-shadow:var(--shadow)}
+.value .ico{width:32px;height:32px;border-radius:9px;background:var(--brand-soft);display:flex;align-items:center;justify-content:center;margin-bottom:12px}
+.value .ico svg{stroke:var(--brand)}
+.value h3{font-size:15.5px;font-weight:700;margin-bottom:7px}
+.value p{font-size:14px;color:var(--ink-2);line-height:1.8}
+.value p b{color:var(--ink);font-weight:600}
 
-/* ---------- summary ---------- */
-.summary{
-  background:var(--card);border:1px solid var(--line);border-radius:var(--radius);
-  padding:20px 22px;box-shadow:var(--shadow);
-  font-size:15px;color:var(--ink-2);
-}
-.summary strong{color:var(--ink);font-weight:600}
-.summary mark{background:var(--gold-soft);color:var(--gold);padding:1px 5px;border-radius:4px;font-weight:600}
+/* ---------- track ---------- */
+.tracks{display:grid;gap:12px}
+.track{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:18px 20px;box-shadow:var(--shadow)}
+.track-top{display:flex;align-items:baseline;gap:10px;flex-wrap:wrap;margin-bottom:10px}
+.track-name{font-size:16px;font-weight:700}
+.track-note{font-size:12.5px;color:var(--ink-3)}
+.tags{display:flex;flex-wrap:wrap;gap:7px}
+.tag{font-size:12.5px;color:var(--ink-2);background:#F8FAFC;border:1px solid var(--line);border-radius:7px;padding:4px 10px}
+.tag.hot{color:var(--brand);background:var(--brand-soft);border-color:#DCE6FF;font-weight:600}
 
-/* ---------- timeline ---------- */
-.timeline{position:relative;padding-left:22px}
-.timeline::before{
-  content:"";position:absolute;left:5px;top:8px;bottom:8px;width:1px;background:var(--line);
-}
-.job{position:relative;margin-bottom:26px}
-.job:last-child{margin-bottom:0}
-.job::before{
-  content:"";position:absolute;left:-22px;top:9px;width:11px;height:11px;border-radius:50%;
-  background:#fff;border:2px solid var(--brand);
-}
-.job.now::before{background:var(--brand)}
-.job-head{display:flex;align-items:baseline;gap:10px;flex-wrap:wrap}
-.job-title{font-size:16px;font-weight:700}
-.job-co{font-size:14px;color:var(--brand);font-weight:600}
-.job-date{
-  font-size:12.5px;color:var(--ink-3);
-  border:1px solid var(--line);border-radius:999px;padding:1px 10px;background:#fff;
-  margin-left:auto;white-space:nowrap;
-}
-.job-sub{font-size:13px;color:var(--ink-3);margin-top:3px;letter-spacing:.02em}
-.job ul{list-style:none;margin-top:10px;display:grid;gap:7px}
-.job li{position:relative;padding-left:15px;font-size:14.5px;color:var(--ink-2)}
-.job li::before{
-  content:"";position:absolute;left:2px;top:11px;width:5px;height:5px;border-radius:50%;
-  background:#B9C3D4;
-}
-.job li b{color:var(--ink);font-weight:600}
+/* ---------- process ---------- */
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.step{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:16px 18px;box-shadow:var(--shadow)}
+.step .n{font-size:12px;font-weight:700;color:var(--brand);letter-spacing:.08em;display:inline-block;margin-bottom:8px}
+.step h3{font-size:14.5px;font-weight:700;margin-bottom:5px}
+.step p{font-size:13px;color:var(--ink-3);line-height:1.7}
 
-/* ---------- edu ---------- */
-.edu{
-  background:var(--card);border:1px solid var(--line);border-radius:var(--radius);
-  padding:18px 20px;box-shadow:var(--shadow);
-}
-.edu-head{display:flex;align-items:baseline;gap:10px;flex-wrap:wrap}
-.edu-school{font-size:16px;font-weight:700}
-.edu-major{font-size:14px;color:var(--ink-2)}
-.edu-date{font-size:12.5px;color:var(--ink-3);margin-left:auto}
-.edu p{font-size:13.5px;color:var(--ink-3);margin-top:8px}
+/* ---------- about ---------- */
+.about{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:22px 24px;box-shadow:var(--shadow)}
+.about p{font-size:14.5px;color:var(--ink-2);margin-bottom:12px}
+.about p:last-child{margin-bottom:0}
+.about p b{color:var(--ink);font-weight:600}
+.about .quote{border-left:3px solid var(--brand);color:var(--ink);font-size:14.5px;background:var(--brand-soft);border-radius:0 8px 8px 0;padding:10px 0 10px 14px}
 
-/* ---------- tags ---------- */
-.tags{display:flex;flex-wrap:wrap;gap:8px}
-.tag{
-  font-size:13px;color:var(--ink-2);
-  background:#fff;border:1px solid var(--line);border-radius:8px;
-  padding:5px 12px;
-}
-.tag.key{color:var(--brand);background:var(--brand-soft);border-color:#DCE6FF;font-weight:600}
+/* ---------- faq ---------- */
+.faq{display:grid;gap:8px}
+details.item{background:var(--card);border:1px solid var(--line);border-radius:11px;padding:14px 18px;box-shadow:var(--shadow)}
+details.item summary{cursor:pointer;font-size:14.5px;font-weight:600;color:var(--ink);list-style:none;display:flex;align-items:center;gap:10px}
+details.item summary::-webkit-details-marker{display:none}
+details.item summary::before{content:"Q";font-size:11px;font-weight:700;color:var(--brand);background:var(--brand-soft);border-radius:5px;padding:1px 5px;flex:none}
+details.item summary::after{content:"+";margin-left:auto;color:var(--ink-3);font-weight:400;font-size:17px}
+details.item[open] summary::after{content:"−"}
+details.item p{font-size:14px;color:var(--ink-2);margin-top:10px}
+
+/* ---------- promise ---------- */
+.promise{background:var(--green-soft);border:1px solid #C8E8DC;border-radius:var(--radius);padding:18px 20px}
+.promise h3{font-size:14.5px;font-weight:700;color:var(--green);margin-bottom:8px;letter-spacing:.03em}
+.promise ul{list-style:none;display:grid;gap:6px}
+.promise li{font-size:13.5px;color:#155E4B;position:relative;padding-left:16px}
+.promise li::before{content:"";position:absolute;left:2px;top:10px;width:5px;height:5px;border-radius:50%;background:var(--green)}
+
+/* ---------- cta ---------- */
+.cta{background:var(--ink);color:#fff;border-radius:16px;padding:32px;display:flex;align-items:center;justify-content:space-between;gap:26px;flex-wrap:wrap}
+.cta h2{font-size:21px;font-weight:700;letter-spacing:.03em;margin-bottom:8px}
+.cta p{font-size:14px;color:#B6C2D6;max-width:520px}
+.cta p b{color:#fff;font-weight:600}
+.cta-btns{display:flex;gap:10px;flex-wrap:wrap;margin-top:18px}
+.cta-ways{display:grid;gap:9px;font-size:14px}
+.cta-ways div{display:flex;align-items:center;gap:9px;color:#E2E8F0}
+.cta-ways svg{opacity:.7;flex:none}
+.cta-ways a{border-bottom:1px solid rgba(255,255,255,.25);padding-bottom:1px}
+.cta-ways a:hover{border-color:#fff}
 
 /* ---------- tbd ---------- */
-.tbd{
-  color:var(--gold);background:var(--gold-soft);
-  border-bottom:1px dashed var(--gold);
-  padding:0 4px;border-radius:3px;font-size:13px;
-}
+.tbd{color:var(--gold);background:var(--gold-soft);border-bottom:1px dashed var(--gold);padding:0 4px;border-radius:3px;font-size:13px}
 
 /* ---------- footer ---------- */
-footer{
-  border-top:1px solid var(--line);
-  padding:22px 0 40px;
-  font-size:12.5px;color:var(--ink-3);
-  display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;
-}
+footer{border-top:1px solid var(--line);padding:22px 0 40px;font-size:12.5px;color:var(--ink-3)}
+footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
 
 /* ---------- reveal ---------- */
 .reveal{opacity:0;transform:translateY(10px);transition:opacity .5s ease,transform .5s ease}
 .reveal.in{opacity:1;transform:none}
-@media (prefers-reduced-motion:reduce){
-  .reveal{opacity:1;transform:none;transition:none}
-  html{scroll-behavior:auto}
-}
+@media (prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}html{scroll-behavior:auto}}
 
 /* ---------- responsive ---------- */
 @media (max-width:860px){
-  .kpis{grid-template-columns:repeat(2,1fr)}
-  .hero{padding:40px 0 34px}
-  .name{font-size:31px}
-  .job-date{margin-left:0}
+  .values{grid-template-columns:1fr}
+  .steps{grid-template-columns:1fr 1fr}
+  h1.headline{font-size:27px}
+  .hero{padding:44px 0 34px}
+  .cta{padding:26px 22px}
 }
 @media (max-width:520px){
   body{font-size:14.5px}
-  .kpis{grid-template-columns:1fr 1fr}
-  .kpi .num{font-size:22px}
+  .steps{grid-template-columns:1fr}
+  h1.headline{font-size:23px}
+  .hero-facts{gap:16px}
+  .hero-facts b{font-size:17px}
 }
 
 /* ---------- print ---------- */
 @media print{
-  @page{size:A4;margin:14mm 14mm}
-  body{background:#fff;font-size:10.5pt;line-height:1.6}
-  .hero{background:#fff;color:var(--ink);padding:0 0 12px;border-bottom:2px solid var(--ink)}
-  .hero::after{display:none}
-  .name{font-size:26pt}
-  .role{color:var(--brand-2,#1D4ED8);color:var(--brand)}
-  .chip{border-color:#CBD5E1;color:var(--ink-2);background:#fff}
-  .contact{color:var(--ink-2)}
-  .quicknav,footer .no-print,.btn{display:none!important}
-  main{padding:10px 0 0}
-  .kpi,.summary,.edu,.tag{box-shadow:none}
-  .section{margin-bottom:16px}
-  .job{margin-bottom:14px}
+  @page{size:A4;margin:12mm}
+  body{background:#fff;font-size:10pt;line-height:1.55}
+  .hero{background:#fff;color:var(--ink);padding:0 0 10px;border-bottom:2px solid var(--ink)}
+  .hero::before,.hero::after{display:none}
+  h1.headline{font-size:20pt}
+  h1.headline em{color:var(--ink)}
+  .hero p.sub{color:var(--ink-2)}
+  .hero-actions,.quicknav,footer .no-print,.btn{display:none!important}
+  .hero-facts{color:var(--ink-3);border-top:1px solid var(--line)}
+  .hero-facts b{color:var(--ink)}
+  .value,.track,.step,.about,details.item{box-shadow:none}
   .reveal{opacity:1!important;transform:none!important}
-  section{break-inside:avoid}
-  .job{break-inside:avoid}
+  .section{margin-bottom:14px}
+  .value,.step,.track,details.item{break-inside:avoid}
+  .cta{background:#fff;color:var(--ink);border:1px solid var(--line);padding:12px}
+  .cta p,.cta-ways div{color:var(--ink-2)}
 }
 </style>
 </head>
 <body>
 
 <header class="hero">
-  <div class="wrap hero-top">
-    <div>
-      <h1 class="name">杨天赐</h1>
-      <p class="role">猎头顾问 · 算法 &amp; 具身智能方向</p>
-      <div class="chips">
-        <span class="chip">技术岗招聘</span>
-        <span class="chip">算法 / 大模型</span>
-        <span class="chip">具身智能 / 机器人</span>
-        <span class="chip">人才 Mapping</span>
-      </div>
+  <div class="wrap hero-inner">
+    <div class="who">杨天赐 · 猎头顾问 · 算法 &amp; 具身智能</div>
+    <h1 class="headline">帮算法与具身智能方向的工程师，<br>找到<em>值得去</em>的团队。</h1>
+    <p class="sub">
+      我不做「海投通道」。我会先搞懂你在做什么方向、想要什么样的团队，再把市场上真正匹配的机会挑出来递给你——
+      从简历梳理到 offer 谈判，全程陪你走完。
+    </p>
+    <div class="hero-actions">
+      <button class="btn btn-solid" id="copyMail" type="button">复制我的邮箱</button>
+      <a class="btn" href="tel:18123488256">打电话给我</a>
+      <a class="btn" href="#faq">先看常见问题</a>
     </div>
-    <div class="contact">
-      <div class="contact-row">
-        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.5c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2Z"/></svg>
-        <a href="tel:18123488256">181 2348 8256</a>
-      </div>
-      <div class="contact-row">
-        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m2 7 10 6 10-6"/></svg>
-        <a href="mailto:2762809302@qq.com">2762809302@qq.com</a>
-      </div>
-      <div class="contact-row">
-        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/></svg>
-        <span>24 岁 · 人力资源管理 本科</span>
-      </div>
+    <div class="hero-facts">
+      <span><b>80</b>万 · 年度个人业绩</span>
+      <span><b>2</b>条深耕赛道 · 算法 / 具身智能</span>
+      <span><b>待补充</b> 位候选人已成功入职</span>
     </div>
   </div>
 </header>
 
 <nav class="quicknav" aria-label="页面导航">
   <div class="wrap">
-    <a href="#summary">个人简介</a>
-    <a href="#kpi">核心业绩</a>
-    <a href="#exp">工作经历</a>
-    <a href="#edu">教育背景</a>
-    <a href="#skill">技能标签</a>
-    <div class="nav-actions">
-      <button class="btn" id="copyMail" type="button">复制邮箱</button>
-      <button class="btn btn-primary" id="printBtn" type="button">打印 / 存 PDF</button>
-    </div>
+    <a href="#offer">我能帮你什么</a>
+    <a href="#track">专注的赛道</a>
+    <a href="#process">合作流程</a>
+    <a href="#about">关于我</a>
+    <a href="#promise">隐私承诺</a>
+    <a href="#faq">常见问题</a>
+    <a href="#contact">联系我</a>
   </div>
 </nav>
 
 <main class="wrap">
 
-  <section class="section reveal" id="summary">
-    <div class="section-head"><h2>个人简介</h2><span class="hint">About</span></div>
-    <p class="summary">
-      人力资源管理专业本科，2025 年进入猎头行业，专注 <strong>算法</strong> 与 <strong>具身智能（机器人）</strong> 方向的技术岗位招聘，
-      年度个人业绩 <mark>80 万元</mark>。熟悉技术岗位的技能栈与评估维度，能与技术面试官在同一语境下对齐人才标准；
-      擅长赛道人才 Mapping、候选人深度沟通与 Offer 全流程推进。此前在高校党委武装部从事征兵、民兵组织与教学协调工作，
-      具备较强的跨部门沟通、流程执行与合规意识。
-    </p>
-  </section>
-
-  <section class="section reveal" id="kpi">
-    <div class="section-head"><h2>核心业绩</h2><span class="hint">Highlights</span></div>
-    <div class="kpis">
-      <div class="kpi">
-        <div class="num">80<small>万</small></div>
-        <div class="lab">年度个人业绩</div>
+  <section class="section reveal" id="offer">
+    <div class="section-head"><h2>我能帮你什么</h2></div>
+    <p class="section-sub">技术人换工作最怕两件事：信息不对称，和被当成简历转发出去。这两件事我都在意。</p>
+    <div class="values">
+      <div class="value">
+        <div class="ico"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg></div>
+        <h3>只推真正匹配的岗位</h3>
+        <p>先聊清你的技术方向、城市、职级和底线，我只推荐<b>你愿意去面试</b>的团队，不拿你的简历去凑数。</p>
       </div>
-      <div class="kpi">
-        <div class="num">2<small>条</small></div>
-        <div class="lab">深耕赛道：算法 / 具身智能</div>
+      <div class="value">
+        <div class="ico"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/><path d="M9 15h6M9 11h3"/></svg></div>
+        <h3>帮你把项目讲明白</h3>
+        <p>简历不是流水账。我帮你把项目里的<b>难点、方案和结果</b>翻译成面试官想看的样子，尤其是算法与机器人方向的技术细节。</p>
       </div>
-      <div class="kpi">
-        <div class="num">1.5<small>年+</small></div>
-        <div class="lab">技术招聘从业经验</div>
+      <div class="value">
+        <div class="ico"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><path d="M12 20V10"/><path d="M6 20v-4"/><path d="M18 20V4"/></svg></div>
+        <h3>面试全程陪跑</h3>
+        <p>每轮面试前告诉你这个团队在考什么、面试官背景如何；面试后一起复盘，把每一轮都当成下一轮的准备。</p>
       </div>
-      <div class="kpi is-tbd">
-        <div class="num">待补充</div>
-        <div class="lab">累计成功入职人数</div>
+      <div class="value">
+        <div class="ico"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><path d="M12 2v20"/><path d="M17 6H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg></div>
+        <h3>用市场数据帮你谈薪</h3>
+        <p>同赛道、同级别、同城市的真实薪资水位我大致清楚。offer 给得合不合理、还能不能争，我给你<b>判断依据</b>而不是空话。</p>
       </div>
     </div>
   </section>
 
-  <section class="section reveal" id="exp">
-    <div class="section-head"><h2>工作经历</h2><span class="hint">Experience</span></div>
-    <div class="timeline">
-
-      <article class="job now">
-        <div class="job-head">
-          <span class="job-title">猎头顾问</span>
-          <span class="job-co">talentin</span>
-          <span class="job-date">2025.03 — 至今</span>
+  <section class="section reveal" id="track">
+    <div class="section-head"><h2>我专注的赛道</h2></div>
+    <p class="section-sub">只做两条线，因为这两条线的岗位、团队和技术语言，我聊得下去。</p>
+    <div class="tracks">
+      <div class="track">
+        <div class="track-top">
+          <span class="track-name">算法</span>
+          <span class="track-note">感知 · 规划控制 · 大模型与多模态</span>
         </div>
-        <div class="job-sub">算法 / 具身智能方向 · 技术岗位招聘</div>
-        <ul>
-          <li><b>业绩达成：</b>年度个人业绩 <b>80 万元</b>，主要来自算法与具身智能方向的技术岗位交付。</li>
-          <li><b>赛道聚焦：</b>深耕算法（感知 / 规划控制 / 大模型与多模态）与具身智能（人形机器人、四足机器人、机械臂、具身大模型）两条技术线，能读懂技术栈与项目经历，与用人部门对齐人才画像。</li>
-          <li><b>需求拆解：</b>对接用人部门与 HR，完成职位拆解、画像校准与 JD 修订，按紧急程度与成功概率排定交付优先级。</li>
-          <li><b>人才寻访：</b>通过脉脉、LinkedIn、GitHub、学术会议与行业社群开展人才 Mapping，沉淀赛道人才地图与候选人库。</li>
-          <li><b>交付闭环：</b>负责简历筛选与推荐、面试协调、薪资谈判、Offer 跟进及入职后回访，推动岗位按期关闭。</li>
-          <li><b>行业研究：</b>输出目标公司组织架构与团队分布 Mapping 报告，为客户提供薪酬水平与人才流动参考。</li>
-          <li><b>客户类型：</b><span class="tbd">待补充</span>（如：机器人整机厂 / 自动驾驶公司 / AI 大模型团队）。</li>
-        </ul>
-      </article>
-
-      <article class="job">
-        <div class="job-head">
-          <span class="job-title">助学助管</span>
-          <span class="job-co">四川旅游学院 · 党委武装部（国防教育教研室）</span>
-          <span class="job-date">2025.09 — 2026.03</span>
+        <div class="tags">
+          <span class="tag hot">SLAM / 定位建图</span>
+          <span class="tag hot">运动控制 / 规划决策</span>
+          <span class="tag">感知算法（视觉 / 激光）</span>
+          <span class="tag">强化学习</span>
+          <span class="tag">多模态大模型</span>
+          <span class="tag">模型部署与推理优化</span>
         </div>
-        <div class="job-sub">征兵动员 · 民兵组织 · 教学协调 · 部门财务</div>
-        <ul>
-          <li><b>征兵动员：</b>负责征兵动员 PPT 制作与宣讲，解答义务兵待遇及优待政策咨询，组织初检与兵检通知。</li>
-          <li><b>背景调查：</b>协助开展入伍背景调查，与辅导员、学生常住地村（居）委会、地方派出所及区武装部协同推进。</li>
-          <li><b>民兵组建：</b>参与基干民兵招聘与政治考核，草拟政治考核试题。</li>
-          <li><b>教学协调：</b>对接各学院《国防教育》课程教师，处理成绩登记与教学疑问，定期回访并汇总教学进度与困难上报。</li>
-          <li><b>部门财务：</b>负责办公用品采购与报账，审核部门各项支出。</li>
-        </ul>
-      </article>
-
-    </div>
-  </section>
-
-  <section class="section reveal" id="edu">
-    <div class="section-head"><h2>教育背景</h2><span class="hint">Education</span></div>
-    <div class="edu">
-      <div class="edu-head">
-        <span class="edu-school">四川农业大学</span>
-        <span class="edu-major">人力资源管理 · 本科</span>
-        <span class="edu-date">2021.09 — 2025.06</span>
       </div>
-      <p>主修课程：核心人才招聘与云招聘、劳动经济学、绩效管理、培训开发、薪酬管理、应用统计学</p>
+      <div class="track">
+        <div class="track-top">
+          <span class="track-name">具身智能</span>
+          <span class="track-note">人形 / 四足 / 机械臂 / 具身大模型</span>
+        </div>
+        <div class="tags">
+          <span class="tag hot">VLA（视觉-语言-动作）</span>
+          <span class="tag hot">机械臂控制</span>
+          <span class="tag">人形机器人运控</span>
+          <span class="tag">四足机器人</span>
+          <span class="tag">仿真与 Sim2Real</span>
+          <span class="tag">嵌入式 / 机器人软件</span>
+        </div>
+      </div>
     </div>
   </section>
 
-  <section class="section reveal" id="skill">
-    <div class="section-head"><h2>技能标签</h2><span class="hint">Skills</span></div>
-    <div class="tags">
-      <span class="tag key">技术岗招聘</span>
-      <span class="tag key">人才 Mapping</span>
-      <span class="tag key">候选人寻访</span>
-      <span class="tag key">Offer 谈判</span>
-      <span class="tag">算法岗位画像</span>
-      <span class="tag">具身智能 / 机器人行业</span>
-      <span class="tag">简历筛选与推荐</span>
-      <span class="tag">面试协调</span>
-      <span class="tag">行业与薪酬调研</span>
-      <span class="tag">客户关系维护</span>
-      <span class="tag">普通话</span>
-      <span class="tag">Word / Excel / PPT</span>
+  <section class="section reveal" id="process">
+    <div class="section-head"><h2>我们怎么合作</h2></div>
+    <p class="section-sub">从第一次聊到入职落地，六步走完。每一步你都知道进展到哪。</p>
+    <div class="steps">
+      <div class="step"><span class="n">STEP 01</span><h3>聊一次（30 分钟）</h3><p>你的方向、城市、薪资预期、不能接受的底线，以及现在为什么想动。</p></div>
+      <div class="step"><span class="n">STEP 02</span><h3>筛岗位</h3><p>从手上的职位里挑出 3-5 个真正匹配的，把团队背景、技术栈、汇报线讲清楚。</p></div>
+      <div class="step"><span class="n">STEP 03</span><h3>改简历</h3><p>按目标岗位重排项目顺序、补技术细节、量化结果，一版一版过。</p></div>
+      <div class="step"><span class="n">STEP 04</span><h3>面试陪跑</h3><p>每轮前给到面试官背景与考察重点，每轮后一起复盘补短板。</p></div>
+      <div class="step"><span class="n">STEP 05</span><h3>Offer 谈判</h3><p>用同赛道薪资数据帮你判断合理性，该争的帮你说清楚。</p></div>
+      <div class="step"><span class="n">STEP 06</span><h3>入职跟进</h3><p>试用期保持联系，帮你平稳落地，也听你真实的反馈。</p></div>
+    </div>
+  </section>
+
+  <section class="section reveal" id="about">
+    <div class="section-head"><h2>关于我</h2></div>
+    <p class="section-sub">为什么是我来帮你找这份工作。</p>
+    <div class="about">
+      <p>人力资源管理专业本科（四川农业大学），2025 年进入猎头行业，专注<b>算法</b>与<b>具身智能</b>方向的技术岗位招聘，年度个人业绩 <b>80 万元</b>。</p>
+      <p>入行之前在高校党委武装部做征兵动员、民兵组织与教学协调——那段时间练的是把复杂流程讲清楚、把不确定的事一件件推进落地。这两件事，恰好也是找工作最需要的。</p>
+      <p class="quote">工程师不缺机会，缺的是信息对称。我想做的，就是把你和市场之间的那层信息差补上。</p>
+    </div>
+  </section>
+
+  <section class="section reveal" id="promise">
+    <div class="section-head"><h2>我对你的承诺</h2></div>
+    <div class="promise">
+      <h3>简历与隐私</h3>
+      <ul>
+        <li>推荐前一定先征得你同意：公司、岗位、团队情况先说清楚，你点头我才发。</li>
+        <li>不把你的简历同时投给多家竞争公司，不为凑单重复推荐。</li>
+        <li>离职动机、当前薪资等敏感信息，只在你授权后与对方沟通。</li>
+        <li>不合适就是不合适，不用「再面一面看看」拖着你。</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="section reveal" id="faq">
+    <div class="section-head"><h2>常见问题</h2></div>
+    <div class="faq">
+      <details class="item" open>
+        <summary>找你帮忙看机会，需要付费吗？</summary>
+        <p>不需要。猎头的费用由用人企业承担，对候选人全程免费。任何以「内推费」「简历包装费」名义向你收费的，都不是正经猎头。</p>
+      </details>
+      <details class="item">
+        <summary>我的简历会不会被到处转发？</summary>
+        <p>不会。每次推荐我都会先跟你确认公司和岗位，得到同意后才发给对方；未经你授权，简历不会出现在任何其他渠道。</p>
+      </details>
+      <details class="item">
+        <summary>我现在没打算跳，能先聊聊吗？</summary>
+        <p>可以。很多人最初只是想了解赛道行情、团队真实情况和薪资水位。先把市场看清楚，等机会真的合适再动，这样的决定更稳。</p>
+      </details>
+      <details class="item">
+        <summary>你主要推哪些城市和公司？</summary>
+        <p>主要城市与客户类型：<span class="tbd">待补充</span>（例如北京 / 上海 / 深圳 / 杭州，机器人整机厂与 AI 大模型团队）。异地的机会，我会先把城市、团队和迁移成本讲清楚，再问你的意愿。</p>
+      </details>
+      <details class="item">
+        <summary>我不是名校 / 大厂背景，有机会吗？</summary>
+        <p>有。技术岗看的是项目深度和解决问题的能力。简历不亮眼的时候，我们更要把「你解决过什么难题」讲透，这比学校名字有用。</p>
+      </details>
+    </div>
+  </section>
+
+  <section class="section reveal" id="contact">
+    <div class="cta">
+      <div>
+        <h2>聊聊你的下一步</h2>
+        <p>把简历发到我的邮箱，或者直接打电话。发邮件时顺手写一句：<b>想去的方向 / 城市 / 期望薪资区间</b>，我回复会快很多。</p>
+        <div class="cta-btns">
+          <button class="btn btn-solid" id="copyMail2" type="button">复制邮箱</button>
+          <a class="btn" href="mailto:2762809302@qq.com?subject=%E6%9D%A8%E5%A4%A9%E8%B5%90%EF%BC%9A%E6%83%B3%E8%81%8A%E8%81%8A%E6%9C%BA%E4%BC%9A">直接发邮件</a>
+        </div>
+      </div>
+      <div class="cta-ways">
+        <div>
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m2 7 10 6 10-6"/></svg>
+          <a href="mailto:2762809302@qq.com">2762809302@qq.com</a>
+        </div>
+        <div>
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.5c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2Z"/></svg>
+          <a href="tel:18123488256">181 2348 8256</a>
+        </div>
+        <div>
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round"><path d="M21 11.5a8.4 8.4 0 0 1-9 8.4 9 9 0 0 1-3.9-.9L3 21l1.9-4.9A8.4 8.4 0 0 1 12 3a8.4 8.4 0 0 1 9 8.5Z"/></svg>
+          <span>微信：<span class="tbd">待补充</span></span>
+        </div>
+      </div>
     </div>
   </section>
 
 </main>
 
-<footer class="wrap">
-  <span>© <span id="yr">2026</span> 杨天赐 · 猎头顾问（算法 / 具身智能方向）</span>
-  <span class="no-print">更新于 2026.10</span>
+<footer>
+  <div class="wrap">
+    <span>© <span id="yr">2026</span> 杨天赐 · 猎头顾问（算法 / 具身智能方向）</span>
+    <span class="no-print">对候选人全程免费 · 简历信息严格保密</span>
+  </div>
 </footer>
 
 <script>
 (function(){
-  var y = document.getElementById('yr');
-  if (y) y.textContent = new Date().getFullYear();
+  var y=document.getElementById('yr'); if(y) y.textContent=new Date().getFullYear();
 
-  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  var items = document.querySelectorAll('.reveal');
-  if (reduce || !('IntersectionObserver' in window)) {
-    items.forEach(function(el){ el.classList.add('in'); });
-  } else {
-    var io = new IntersectionObserver(function(entries){
-      entries.forEach(function(e){
-        if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
-      });
-    }, { rootMargin: '0px 0px -8% 0px', threshold: 0.06 });
-    items.forEach(function(el){ io.observe(el); });
+  var reduce=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var items=document.querySelectorAll('.reveal');
+  if(reduce||!('IntersectionObserver' in window)){
+    items.forEach(function(el){el.classList.add('in');});
+  }else{
+    var io=new IntersectionObserver(function(es){
+      es.forEach(function(e){ if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);} });
+    },{rootMargin:'0px 0px -8% 0px',threshold:0.06});
+    items.forEach(function(el){io.observe(el);});
   }
 
-  var links = Array.prototype.slice.call(document.querySelectorAll('.quicknav a'));
-  var secs = links.map(function(a){ return document.querySelector(a.getAttribute('href')); });
-  if ('IntersectionObserver' in window) {
-    var spy = new IntersectionObserver(function(entries){
-      entries.forEach(function(e){
-        if (!e.isIntersecting) return;
-        links.forEach(function(a){ a.classList.remove('active'); });
-        var i = secs.indexOf(e.target);
-        if (i > -1) links[i].classList.add('active');
+  var links=[].slice.call(document.querySelectorAll('.quicknav a'));
+  var secs=links.map(function(a){return document.querySelector(a.getAttribute('href'));});
+  if('IntersectionObserver' in window){
+    var spy=new IntersectionObserver(function(es){
+      es.forEach(function(e){
+        if(!e.isIntersecting) return;
+        links.forEach(function(a){a.classList.remove('active');});
+        var i=secs.indexOf(e.target); if(i>-1) links[i].classList.add('active');
       });
-    }, { rootMargin: '-45% 0px -50% 0px' });
-    secs.forEach(function(s){ if (s) spy.observe(s); });
+    },{rootMargin:'-45% 0px -50% 0px'});
+    secs.forEach(function(s){ if(s) spy.observe(s); });
   }
 
-  var mailBtn = document.getElementById('copyMail');
-  if (mailBtn) {
-    mailBtn.addEventListener('click', function(){
-      var text = '2762809302@qq.com';
-      var done = function(){
-        mailBtn.textContent = '已复制';
-        setTimeout(function(){ mailBtn.textContent = '复制邮箱'; }, 1600);
-      };
-      if (navigator.clipboard && window.isSecureContext) {
-        navigator.clipboard.writeText(text).then(done, fallback);
-      } else { fallback(); }
-      function fallback(){
-        var ta = document.createElement('textarea');
-        ta.value = text; ta.style.position = 'fixed'; ta.style.opacity = '0';
+  function bindCopy(id){
+    var b=document.getElementById(id); if(!b) return;
+    var label=b.textContent;
+    b.addEventListener('click',function(){
+      var text='2762809302@qq.com';
+      var done=function(){ b.textContent='已复制，去粘贴吧'; setTimeout(function(){b.textContent=label;},1800); };
+      var fb=function(){
+        var ta=document.createElement('textarea');
+        ta.value=text; ta.style.position='fixed'; ta.style.opacity='0';
         document.body.appendChild(ta); ta.select();
-        try { document.execCommand('copy'); done(); } catch(err){}
+        try{document.execCommand('copy');done();}catch(e){}
         document.body.removeChild(ta);
-      }
+      };
+      if(navigator.clipboard&&window.isSecureContext){
+        navigator.clipboard.writeText(text).then(done,fb);
+      }else{ fb(); }
     });
   }
-
-  var p = document.getElementById('printBtn');
-  if (p) p.addEventListener('click', function(){ window.print(); });
+  bindCopy('copyMail'); bindCopy('copyMail2');
 })();
 </script>
 </body>
